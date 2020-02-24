@@ -2,13 +2,12 @@
 
 Aplicação React que irá renderizar um formulário para registrar uma pesquisa de recrutamento.<br /> 
 
-**A aplicação deve:<br />**
+**A aplicação é uma SPA, que realiza as seguintes funções:<br />**
 
-Ser uma SPA (Single Page Application, exibindo todos os campos);<br />
-Armazenar o valores dos campos assim que o usuário preencher;<br />
-Deve exibir erros nos campos quando inválidos;<br />
-Realizar uma request com os dados do formulário para a API disponibilizada.<br />
-Exibir erros retornados pela API.
+ - Armazenar o valores dos campos assim que o usuário preencher;<br />
+ - Deve exibir erros nos campos quando inválidos;<br />
+ - Realizar uma request com os dados do formulário para a API disponibilizada.<br />
+ - Exibir erros retornados pela API.
 
 ### `yarn`
 Esse projeto está utilizando o yarn como gerenciador de pacotes, sendo assim para fazer a instalação de todas as dependências basta dar o comando "yarn" no terminal dentro da pasta que está projeto.
