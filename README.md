@@ -1,8 +1,7 @@
 ## Teste Frontend Intertrack
 
-O objetivo deste teste é avaliar conhecimento e experiência com React e bibliotecas relacionadas para desenvolvedor front-end.<br />
-Você deve construir uma aplicação React que irá renderizar um formulário para registrar uma pesquisa de recrutamento. A aplicação deve:
-
+Aplicação React que irá renderizar um formulário para registrar uma pesquisa de recrutamento.<br /> 
+###A aplicação deve:<br />
 Ser uma SPA (Single Page Application, exibindo todos os campos);<br />
 Armazenar o valores dos campos assim que o usuário preencher;<br />
 Deve exibir erros nos campos quando inválidos;<br />
