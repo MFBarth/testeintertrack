@@ -1,7 +1,7 @@
 ## Teste Frontend Intertrack
 
 Aplicação React que irá renderizar um formulário para registrar uma pesquisa de recrutamento.<br /> 
-###A aplicação deve:<br />
+**A aplicação deve:<br />**
 Ser uma SPA (Single Page Application, exibindo todos os campos);<br />
 Armazenar o valores dos campos assim que o usuário preencher;<br />
 Deve exibir erros nos campos quando inválidos;<br />
