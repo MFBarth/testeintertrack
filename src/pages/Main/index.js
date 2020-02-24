@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Select from 'react-select';
-import api from '../../services/api';
+// import api from '../../services/api';
+
+import { apiCallRequest } from '../../store/modules/request/actions';
 
 import {
   Titulo,
@@ -19,6 +22,10 @@ const options = [
 ];
 
 export default function Main() {
+  const dispatch = useDispatch();
+
+  const loading = useSelector(state => state.request.loading);
+
   const [name, setName] = useState('');
   const [bio, setBio] = useState('');
   const [additionalExperience] = useState([]);
@@ -28,20 +35,15 @@ export default function Main() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    api
-      .post('/recruitment-surveys', {
-        name,
-        bio,
-        favoriteJsLibrary: lib,
-        additionalExperience,
-        startDate: Date(startDate),
-      })
-      .then(res => {
-        console.log('Deu certo');
-      })
-      .catch(err => {
-        console.log('Deu erro');
-      });
+    const data = {
+      name,
+      bio,
+      additionalExperience,
+      lib,
+      setLib,
+      startDate: Date(startDate),
+    };
+    dispatch(apiCallRequest(data));
   }
 
   function handleCheckboxChange(event) {
@@ -136,7 +138,9 @@ export default function Main() {
             onChange={event => setStartDate(event.target.value)}
           />
         </Field>
-        <Button type="submit">Enviar formulário</Button>
+        <Button type="submit">
+          {!loading ? 'Enviar formulário' : 'Enviando...'}
+        </Button>
       </Form>
     </Container>
   );
